@@ -1,8 +1,16 @@
+const path = require('path');
+
 const express = require('express');
 const router = express.Router();
 
-router.get('/admin', (req, res, next) => {
-  res.send('<h1>Admin Page By Routing</h1>');
+const rootDir = require('../util/path.js');
+
+router.get('/add-product', (req, res, next) => {
+  res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
+});
+
+router.post('/add-product', (req, res, next) => {
+  res.redirect('/');
 });
 
 module.exports = router;
