@@ -3,10 +3,6 @@
   outline: none;
 }
 
-/* h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-} */
-
 .emptythumb {
   width: 12.5rem;
   height: 12.5rem;
@@ -15,4 +11,16 @@
   justify-content: center;
   margin-inline: auto;
   overflow: hidden;
+}
+
+header .nav-link {
+  color: white;
+}
+
+header .nav-link:hover:not(.activelink) {
+  color: cyan;
+}
+
+header .nav-link.activelink {
+  color: cyan;
 }
