@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Shop
+    link(rel="stylesheet", href="/css/bootstrap/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/style.css")
+    script(src="/js/bootstrap/bootstrap.bundle.min.js" defer)
+  body
+    header.sticky-top.bg-success.py-2
+      div.container
+        nav
+          ul.nav
+            li.nav-item
+              a.nav-link.text-white(href="/") Shop
+            li.nav-item
+              a.nav-link.text-white(href="/admin/add-product") Add Product
+    
+    main.py-4
+      div.container
+        <h1>My Products</h1>
+        <p>List of all products...</p>
