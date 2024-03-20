@@ -16,6 +16,8 @@ app.set('views', 'views');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
+const errorController = require('./controllers/errorController');
+
 // APP-CONFIGURATIONS
 dotenv.config({ path: './config/dotenv.env' });
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -27,9 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/admin/', adminRoutes);
 app.use(shopRoutes);
 
-app.use((req, res, next) => {
-  res.status(404).render('404', { pageTitle: 'Page Not Found' });
-});
+app.use(errorController.get404Page);
 
 const PORT = process.env.PORT;
 
